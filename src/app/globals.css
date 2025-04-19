@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* rgba(252, 249, 248, 1) */
+    --background: 23 0% 96%;
+    --foreground: 23 68% 1%;
+    --muted: 23 6% 91%;
+    --muted-foreground: 23 2% 31%;
+    --popover: 23 38% 99%;
+    --popover-foreground: 23 68% 1%;
+    --card: 23 38% 99%;
+    --card-foreground: 23 68% 1%;
+    --border: 23 2% 94%;
+    --input: 23 2% 94%;
+    --primary: 23 100% 58.22%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 23 8% 91%;
+    --secondary-foreground: 23 8% 31%;
+    --accent: 23 17% 86%;
+    --accent-foreground: 23 17% 26%;
+    --destructive: 360 100% 45.96%;
+    --destructive-foreground: 18 0% 100%;
+    --ring: 23 97% 46%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 23 0% 8.85%;
+    --foreground: 23 16% 99%;
+    --muted: 23 6% 9%;
+    --muted-foreground: 23 2% 69%;
+    --popover: 23 34% 1%;
+    --popover-foreground: 23 16% 99%;
+    --card: 23 34% 1%;
+    --card-foreground: 23 16% 99%;
+    --border: 23 2% 13%;
+    --input: 23 2% 13%;
+    --primary: 23 97% 46%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 23 2% 20%;
+    --secondary-foreground: 23 2% 80%;
+    --accent: 23 9% 29%;
+    --accent-foreground: 23 9% 89%;
+    --destructive: 360 100% 28.65%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 23 97% 46%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.hide-scrollbars::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbars {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 20px; /* or any suitable value */
+  }
+}
+
+@media (min-width: 2560px) {
+  html {
+    font-size: 28px; /* or any suitable value */
+  }
+}
+
+@media (min-width: 3840px) {
+  html {
+    font-size: 32px; /* or any suitable value */
+  }
+}
+
+/* add some padding to the tip tap editor */
+.tiptap {
+  padding: 0.5rem;
+}
+
+/* disble the ring on focus */
+.tiptap:focus-visible {
+  outline: none !important;
+}
